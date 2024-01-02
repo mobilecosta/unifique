@@ -1,0 +1,11 @@
+*****ATENÇÃO*****
+
+Para uso dos programas:
+	- INTPMSCC
+Será necessária a criação de Inicializadores Padrões para os campos:
+	- E2_CCUSTO
+	- E2_ITEMCTA
+	- E5_CCUSTO
+	- E5_ITEMD
+Seguindo a parametrização: U_INTPMSCC("Nome do Campo"), exemplo:
+	- U_INTPMSCC("E2_CCUSTO")
