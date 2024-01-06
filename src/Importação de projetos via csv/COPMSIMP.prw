@@ -117,11 +117,11 @@ static function fImport()
 			cWorkSheet := "PRODUTOS"
 			cTabela	   := "AFA"
 		Case nZ == 4
-			cWorkSheet := "DESPESAS"
-			cTabela	   := "AFB"
-		Case nZ == 5
 			cWorkSheet := "RECURSOS"
 			cTabela	   := "AFA"
+		Case nZ == 5
+			cWorkSheet := "DESPESAS"
+			cTabela	   := "AFB"
 		EndCase
 
 		aRet  := {}
@@ -465,12 +465,14 @@ User Function COPMSGRV(aEdt, aTarefa, aProduto, aDespesa, aRecurso)
 
 				If lMsErroAuto
 					lRet := .F.
+					/*
 					cPath 		:= GetSrvProfString("Startpath","")
 					cArquivo	:= "Erro_PMSA201_"+dtos(Date())+Left(time(),2)+Right(time(),2)
 					MostraErro(cPath,cArquivo + ".txt")
 					cLogMSErr 	:= MemoRead(cPath+cArquivo+".txt")
 					GERLOG('Gravação dos dados', cLogMSErr)
-					//MostraErro()
+					*/
+					MostraErro()
 				Endif
 			Endif
 		Next nX
@@ -672,11 +674,14 @@ User Function COPMSGRV(aEdt, aTarefa, aProduto, aDespesa, aRecurso)
 
 					If lMsErroAuto
 						lRet := .F.
+						/*
 						cPath 		:= GetSrvProfString("Startpath","")
 						cArquivo	:= "Erro_PMSA203_"+dtos(Date())+Left(time(),2)+Right(time(),2)
 						MostraErro(cPath,cArquivo + ".txt")
 						cLogMSErr 	:= MemoRead(cPath+cArquivo+".txt")
 						GERLOG('Gravação dos dados', cLogMSErr)
+						*/
+						MostraErro()
 					else
 						//Trativa devido a erro apresentado na rotina padrão
 						If len(aAFB) > 0
@@ -745,23 +750,23 @@ Static Function PRXNIV(cTabela, cEDTPai)
 	If cTabela == "AFC"
 		cQuery := " SELECT DISTINCT "
 		cQuery += " 	AFC_NIVEL AS NIVATU "
-		cQuery += " FROM "+RetSqlName("AFC")+" AFC (NOLOCK) "
+		cQuery += " FROM "+RetSqlName("AFC")+" AFC "
 		cQuery += " WHERE "
 		cQuery += " 	AFC_FILIAL ='"+xFilial("AFC")+"' AND "
 		cQuery += " 	AFC_PROJET = '"+AF8->AF8_PROJET+"' AND "
 		cQuery += " 	AFC_REVISA = '"+AF8->AF8_REVISA+"' AND "
 		cQuery += " 	AFC_EDTPAI = '"+cEDTPai+"' AND "
-		cQuery += " 	AFC.D_E_L_E_T_ = '' "
+		cQuery += " 	AFC.D_E_L_E_T_ <> '*' "
 	else
 		cQuery := " SELECT DISTINCT "
 		cQuery += " 	AF9_NIVEL AS NIVATU "
-		cQuery += " FROM "+RetSqlName("AF9")+" AF9 (NOLOCK) "
+		cQuery += " FROM "+RetSqlName("AF9")+" AF9 "
 		cQuery += " WHERE "
 		cQuery += " 	AF9_FILIAL ='"+xFilial("AF9")+"' AND "
 		cQuery += " 	AF9_PROJET = '"+AF8->AF8_PROJET+"' AND "
 		cQuery += " 	AF9_REVISA = '"+AF8->AF8_REVISA+"' AND "
 		cQuery += " 	AF9_EDTPAI = '"+cEDTPai+"' AND "
-		cQuery += " 	AF9.D_E_L_E_T_ = '' "
+		cQuery += " 	AF9.D_E_L_E_T_ <> '*' "
 	Endif
 
 	If Select("TSQL") > 0
@@ -769,7 +774,8 @@ Static Function PRXNIV(cTabela, cEDTPai)
 		TSQL->(dbCloseArea())
 	EndIf
 
-	dbUseArea(.T., "TOPCONN", TcGenQry(,, cQuery), "TSQL", .F., .F.)
+	//dbUseArea(.T., "TOPCONN", TcGenQry(,, cQuery), "TSQL", .F., .F.)
+	MpSysOpenQuery(cQuery, "TSQL")
 
 	dbSelectArea("TSQL")
 	TSQL->(dbGotop())
@@ -779,21 +785,21 @@ Static Function PRXNIV(cTabela, cEDTPai)
 		If cTabela == "AFC"
 			cQuery := " SELECT "
 			cQuery += " 	MAX(AFC_NIVEL) AS NIVATU "
-			cQuery += " FROM "+RetSqlName("AFC")+" AFC (NOLOCK) "
+			cQuery += " FROM "+RetSqlName("AFC")+" AFC "
 			cQuery += " WHERE "
 			cQuery += " 	AFC_FILIAL ='"+xFilial("AFC")+"' AND "
 			cQuery += " 	AFC_PROJET = '"+AF8->AF8_PROJET+"' AND "
 			cQuery += " 	AFC_REVISA = '"+AF8->AF8_REVISA+"' AND "
-			cQuery += " 	AFC.D_E_L_E_T_ = '' "
+			cQuery += " 	AFC.D_E_L_E_T_ <> '*' "
 		else
 			cQuery := " SELECT "
 			cQuery += " 	MAX(AF9_NIVEL) AS NIVATU "
-			cQuery += " FROM "+RetSqlName("AF9")+" AF9 (NOLOCK) "
+			cQuery += " FROM "+RetSqlName("AF9")+" AF9 "
 			cQuery += " WHERE "
 			cQuery += " 	AF9_FILIAL ='"+xFilial("AF9")+"' AND "
 			cQuery += " 	AF9_PROJET = '"+AF8->AF8_PROJET+"' AND "
 			cQuery += " 	AF9_REVISA = '"+AF8->AF8_REVISA+"' AND "
-			cQuery += " 	AF9.D_E_L_E_T_ = '' "
+			cQuery += " 	AF9.D_E_L_E_T_ <> '*' "
 		Endif
 
 		If Select("TSQL") > 0
@@ -801,7 +807,8 @@ Static Function PRXNIV(cTabela, cEDTPai)
 			TSQL->(dbCloseArea())
 		EndIf
 
-		dbUseArea(.T., "TOPCONN", TcGenQry(,, cQuery), "TSQL", .F., .F.)
+		//dbUseArea(.T., "TOPCONN", TcGenQry(,, cQuery), "TSQL", .F., .F.)
+		MpSysOpenQuery(cQuery, "TSQL")
 
 		dbSelectArea("TSQL")
 		TSQL->(dbGotop())
