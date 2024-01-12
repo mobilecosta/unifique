@@ -1,0 +1,1704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Microsiga Protheus</Author>
+  <LastAuthor>Framework Time</LastAuthor>
+  <Created>2011-11-11T00:00:00Z</Created>
+  <Version>14.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>11820</WindowHeight>
+  <WindowWidth>18195</WindowWidth>
+  <WindowTopX>480</WindowTopX>
+  <WindowTopY>75</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="TITLE">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="12" ss:Color="#1F497D"  ss:Bold='1'  />
+   <Interior ss:Color="#FFFFFF" ss:Pattern="Solid"/>
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="3" ss:Color="#FFFFFF"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="HEADER">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#4F81BD"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#4F81BD"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#FFFFFF"  ss:Bold='1'  />
+   <Interior ss:Color="#4F81BD" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="LINEA">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#B8CCE4"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000" />
+   <Interior ss:Color="#B8CCE4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="LINEB">
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#DCE6F1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#DCE6F1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000" />
+   <Interior ss:Color="#DCE6F1" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="LINEALeftGeneral" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+
+  </Style>
+  <Style ss:ID="LINEALeftNumber" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEALeftMonetario" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-&quot;R$&quot;\ * #,##0.00_-;\-&quot;R$&quot;\ * #,##0.00_-;_-&quot;R$&quot;\ * &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEALeftDateTime" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="Short Date"/>
+  </Style>
+  <Style ss:ID="LINEALeftNumberDecimal0" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0_-;\-* #,##0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEALeftNumberDecimal1" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0_-;\-* #,##0.0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEALeftNumberDecimal2" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEALeftNumberDecimal3" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000_-;\-* #,##0.000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEALeftNumberDecimal4" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000_-;\-* #,##0.0000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEALeftNumberDecimal5" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000_-;\-* #,##0.00000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEALeftNumberDecimal6" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000000_-;\-* #,##0.000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEALeftNumberDecimal7" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000000_-;\-* #,##0.0000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEALeftNumberDecimal8" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000000_-;\-* #,##0.00000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterGeneral" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+
+  </Style>
+  <Style ss:ID="LINEACenterNumber" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterMonetario" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-&quot;R$&quot;\ * #,##0.00_-;\-&quot;R$&quot;\ * #,##0.00_-;_-&quot;R$&quot;\ * &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterDateTime" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="Short Date"/>
+  </Style>
+  <Style ss:ID="LINEACenterNumberDecimal0" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0_-;\-* #,##0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterNumberDecimal1" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0_-;\-* #,##0.0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterNumberDecimal2" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterNumberDecimal3" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000_-;\-* #,##0.000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterNumberDecimal4" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000_-;\-* #,##0.0000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterNumberDecimal5" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000_-;\-* #,##0.00000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterNumberDecimal6" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000000_-;\-* #,##0.000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterNumberDecimal7" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000000_-;\-* #,##0.0000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEACenterNumberDecimal8" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000000_-;\-* #,##0.00000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightGeneral" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+
+  </Style>
+  <Style ss:ID="LINEARightNumber" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightMonetario" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-&quot;R$&quot;\ * #,##0.00_-;\-&quot;R$&quot;\ * #,##0.00_-;_-&quot;R$&quot;\ * &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightDateTime" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="Short Date"/>
+  </Style>
+  <Style ss:ID="LINEARightNumberDecimal0" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0_-;\-* #,##0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightNumberDecimal1" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0_-;\-* #,##0.0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightNumberDecimal2" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightNumberDecimal3" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000_-;\-* #,##0.000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightNumberDecimal4" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000_-;\-* #,##0.0000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightNumberDecimal5" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000_-;\-* #,##0.00000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightNumberDecimal6" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000000_-;\-* #,##0.000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightNumberDecimal7" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000000_-;\-* #,##0.0000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEARightNumberDecimal8" ss:Parent="LINEA">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000000_-;\-* #,##0.00000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftGeneral" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+
+  </Style>
+  <Style ss:ID="LINEBLeftNumber" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftMonetario" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-&quot;R$&quot;\ * #,##0.00_-;\-&quot;R$&quot;\ * #,##0.00_-;_-&quot;R$&quot;\ * &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftDateTime" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="Short Date"/>
+  </Style>
+  <Style ss:ID="LINEBLeftNumberDecimal0" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0_-;\-* #,##0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftNumberDecimal1" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0_-;\-* #,##0.0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftNumberDecimal2" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftNumberDecimal3" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000_-;\-* #,##0.000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftNumberDecimal4" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000_-;\-* #,##0.0000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftNumberDecimal5" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000_-;\-* #,##0.00000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftNumberDecimal6" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000000_-;\-* #,##0.000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftNumberDecimal7" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000000_-;\-* #,##0.0000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBLeftNumberDecimal8" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000000_-;\-* #,##0.00000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterGeneral" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+
+  </Style>
+  <Style ss:ID="LINEBCenterNumber" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterMonetario" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-&quot;R$&quot;\ * #,##0.00_-;\-&quot;R$&quot;\ * #,##0.00_-;_-&quot;R$&quot;\ * &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterDateTime" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="Short Date"/>
+  </Style>
+  <Style ss:ID="LINEBCenterNumberDecimal0" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0_-;\-* #,##0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterNumberDecimal1" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0_-;\-* #,##0.0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterNumberDecimal2" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterNumberDecimal3" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000_-;\-* #,##0.000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterNumberDecimal4" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000_-;\-* #,##0.0000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterNumberDecimal5" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000_-;\-* #,##0.00000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterNumberDecimal6" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000000_-;\-* #,##0.000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterNumberDecimal7" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000000_-;\-* #,##0.0000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBCenterNumberDecimal8" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000000_-;\-* #,##0.00000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightGeneral" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+
+  </Style>
+  <Style ss:ID="LINEBRightNumber" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightMonetario" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-&quot;R$&quot;\ * #,##0.00_-;\-&quot;R$&quot;\ * #,##0.00_-;_-&quot;R$&quot;\ * &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightDateTime" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="Short Date"/>
+  </Style>
+  <Style ss:ID="LINEBRightNumberDecimal0" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0_-;\-* #,##0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightNumberDecimal1" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0_-;\-* #,##0.0_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightNumberDecimal2" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00_-;\-* #,##0.00_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightNumberDecimal3" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000_-;\-* #,##0.000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightNumberDecimal4" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000_-;\-* #,##0.0000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightNumberDecimal5" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000_-;\-* #,##0.00000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightNumberDecimal6" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.000000_-;\-* #,##0.000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightNumberDecimal7" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.0000000_-;\-* #,##0.0000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+  <Style ss:ID="LINEBRightNumberDecimal8" ss:Parent="LINEB">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>
+<NumberFormat ss:Format="_-* #,##0.00000000_-;\-* #,##0.00000000_-;_-* &quot;-&quot;??_-;_-@_-"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="1-EDT">
+  <Table ss:ExpandedColumnCount="4" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Column ss:Width="52.8"/>
+   <Column ss:Width="211.2"/>
+   <Column ss:Width="39.6"/>
+   <Column ss:Width="66"/>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="TITLE" ss:MergeAcross="3"><Data ss:Type="String">Layout PMS</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFC_EDT</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFC_DESCRI</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFC_UM</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFC_EDTPAI</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">ENG. MODELO FTTH</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">0000002763</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">MODELO ALÍVIO FTTH - IMPLANTAÇÃO</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">0000002763</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">AREA DO PROJETO</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.02</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">COMPARTILHAMENTO</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">CLASSE L</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.04</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">CLASSE F</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.05</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">CADASTRO L</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.06</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">LIBERACAO DE PORTAS</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.07</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">DIARIO DE OBRA ONLINE</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">ELABORACAO</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.02</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">DEFINICAO DO LOCAL DO POP - OK</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.03</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">ENVIO EXECUCAO</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.04.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">ELABORACAO</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.04</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.07.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">DISTRIBUIDOR INTERNO OPTICO</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.07</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.07.02</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">CABOS</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.07</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.07.03</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">CAIXA DE EMENDA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.07</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.07.04</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">CAIXA DE ATENDIMENTO</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.07</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.07.05</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">LIBERAÇÃO DE CIRCUITOS</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.07</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">ANÁLISE</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.02</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">INICIO DE OBRA L</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.03</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">DIÁRIO DE OBRA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.04</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">CONCLUSÃO L</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.05</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">INICIO DE OBRA F</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.06</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">DIÁRIO DE OBRA F</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.07</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">CONCLUSÃO F</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.02.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">COMUNICAÇÃO L</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.02</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.02.02</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">DOCUMENTOS L</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.02</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.02.03</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">MATERIAL L</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.02</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.05.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">COMUNICAÇÃO F</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.05</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.05.02</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">DOCUMENTOS F</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.05</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.05.03</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">MATERIAL F</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.05</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.31496062000000002"/>
+    <Footer x:Margin="0.31496062000000002"/>
+    <PageMargins x:Bottom="0.78740157499999996" x:Left="0.511811024"
+     x:Right="0.511811024" x:Top="0.78740157499999996"/>
+   </PageSetup>
+   <Unsynced/>
+   <Selected/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="2-TAREFAS">
+  <Table ss:ExpandedColumnCount="11" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Column ss:Width="66"/>
+   <Column ss:Width="72.6"/>
+   <Column ss:Width="217.8"/>
+   <Column ss:Width="39.6"/>
+   <Column ss:Width="59.4"/>
+   <Column ss:Width="66"/>
+   <Column ss:Width="66"/>
+   <Column ss:Width="46.2"/>
+   <Column ss:Width="59.4"/>
+   <Column ss:Width="66"/>
+   <Column ss:Width="66"/>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="TITLE" ss:MergeAcross="10"><Data ss:Type="String">Layout PMS</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AF9_EDTPAI</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AF9_TAREFA</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AF9_DESCRI</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AF9_UM</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AF9_QUANT</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AF9_HDURAC</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AF9_CCUSTO</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AF9_BDI</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AF9_NIVEL</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AF9_START</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AF9_FINISH</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.01.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">APROVAÇÃO MERCADO</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">17</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">25/07/2022</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">26/07/2022</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.01.02</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">DEFINICAO DA AREA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">16</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">27/07/2022</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">28/07/2022</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.01.03</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">CONTAGEM UNIDADES CONSUMIDORAS</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8.5</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">29/07/2022</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">29/07/2022</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.01.04</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">LISTA DE MATERIAL PREVISAO</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">17</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01/08/2022</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">03/08/2022</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.01.05</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">SOLICITACAO/ALTERAÇÃO INFRA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0.1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">03/08/2022</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">03/08/2022</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.01.06</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PREPARACAO DA BASE</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">17</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">28/07/2022</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">29/07/2022</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.01.07</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">ENVIO PARA PINGAMENTO</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">72</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02/08/2022</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">05/08/2022</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.01.08</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">RECEBIMENTO DO PINGAMENTO</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">120</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">05/08/2022</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">10/08/2022</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.01.09</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">ATUALIZAR BASE</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8.5</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02/12/2022</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02/12/2022</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.02</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.02.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">PRAZO COMPARTILHAMENTO</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">3000</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">29/07/2022</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01/12/2022</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.02</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">2763.001</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">2763-001_R VER CRISOSTOMO GESSER</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">518</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">2193</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">002</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">26/10/2022</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">21/10/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.01.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">ELABORACAO 1° ETAPA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">250</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">06/12/2022</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">16/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.01.02</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">CORRECAO 1° ETAPA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">17</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">16/01/2023</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">18/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.01.03</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">ELABORACAO 2° ETAPA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">24.5</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">18/01/2023</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">23/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.01.04</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">CORRECAO 2° ETAPA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">32</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">23/01/2023</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">27/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.02</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.02.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">TERMINO DO EXECUTIVO</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">8.5</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">27/01/2023</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">30/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.02</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.02.02</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">AREA DE COBERTURA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8.5</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">30/01/2023</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.02</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.02.03</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">DIARIO DE OBRA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">8.5</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">31/01/2023</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01/02/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.02</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.02.04</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">LISTA DE MATERIAL - L</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8.5</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">30/01/2023</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.02</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.02.05</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">LISTA DE MATERIAL - F</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">8.5</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">30/01/2023</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">31/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.03</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.03.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">ENVIO CLASSE L</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8.5</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/01/2023</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01/02/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.04.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.04.01.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">DIO NOVO</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1088</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01/02/2023</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">31/07/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.04.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.04.01.02</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">IMPORTACAO PARA CM</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8.5</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01/02/2023</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02/02/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.04.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.04.01.03</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">ROTEAMENTO PRIMARIO - CLASSE F</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">8.5</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02/02/2023</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">03/02/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.04.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.04.01.04</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">ROTEAMENTO SECUNDARIO - CLASSE F</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8.5</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">03/02/2023</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">06/02/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.04.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.04.01.05</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">LISTA DE JUMPER</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">03/02/2023</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">03/02/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.05</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.05.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">CADASTRO CM</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8.5</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">03/02/2023</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">06/02/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.06</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.06.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">ATUALIZACAO CA NO CM</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">8.5</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">03/02/2023</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">06/02/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.06</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.06.02</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">IMPORTAR COBERTURA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8.5</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">03/02/2023</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">06/02/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.06</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.06.03</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">LIBERAR CIRCUITO SISTEMA ATIVACAO</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">8.5</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">03/02/2023</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">06/02/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.01.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">ESCOLHA EMPRESA L</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.01.02</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">ESCOLHA EMPRESA F</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01/01/2025</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01/01/2025</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.01.03</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">FISCAL RESPONSÁVEL</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01/01/2025</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01/01/2025</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.01.04</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">COMUNICADO DE ENVIO A UNIDADE</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">23/09/2024</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">23/09/2024</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.02.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.02.01.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">EMREITEIRA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.02.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.02.01.02</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">CONCESSIONÁRIA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01/01/2025</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01/01/2025</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.02.02</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.02.02.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">DIÁRIO DE OBRA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01/01/2025</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01/01/2025</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.02.02</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.02.02.02</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">ART EXECUÇÃO L</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.02.03</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.02.03.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">SOLICITAÇÃO L</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01/01/2025</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01/01/2025</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.02.03</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.02.03.02</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">RETIRADA L</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02/01/2025</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02/01/2025</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.03</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.03.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">LANÇAMENTO DE CABO AS</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">184</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">30/01/2025</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.03</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.03.02</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">CORDOALHA DIELÉTRICA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">32</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">03/01/2025</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.04</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.04.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">ACEITE L</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.04</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.04.02</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">AS BUILT L</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01/01/2025</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01/01/2025</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.05.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.05.01.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">EMPREITEIRA</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.05.02</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.05.02.01</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">ENVIO DO PLANO DE FUSÃO</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01/01/2025</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01/01/2025</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.05.03</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.05.03.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">SOLICITAÇÃO F</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.05.03</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.05.03.02</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">RETIRADA</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">005</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01/01/2025</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01/01/2025</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.06</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.06.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">C.E. EXISTENTE</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.06</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.06.02</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">C.E. NOVA MENOR 12F</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.06</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.06.03</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">C.E. NOVA MAIOR 12F</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.06</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.06.04</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">CAIXA DE ATENDIMENTO</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.07</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.07.01</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">ACEITE F</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.07</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">02.07.02</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">AS BUILT F</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.07</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02.07.03</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">LIBERAÇÃO DE PORTAS - SOLICITAR</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">UN</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">004</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">31/12/2024</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.31496062000000002"/>
+    <Footer x:Margin="0.31496062000000002"/>
+    <PageMargins x:Bottom="0.78740157499999996" x:Left="0.511811024"
+     x:Right="0.511811024" x:Top="0.78740157499999996"/>
+   </PageSetup>
+   <Unsynced/>
+   <Selected/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="3-PRODUTOS">
+  <Table ss:ExpandedColumnCount="7" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Column ss:Width="72.6"/>
+   <Column ss:Width="52.8"/>
+   <Column ss:Width="66"/>
+   <Column ss:Width="59.4"/>
+   <Column ss:Width="59.4"/>
+   <Column ss:Width="59.4"/>
+   <Column ss:Width="66"/>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="TITLE" ss:MergeAcross="6"><Data ss:Type="String">Layout PMS</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFA_TAREFA</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFA_ITEM</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFA_PRODUT</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFA_QUANT</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFA_MOEDA</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFA_CUSTD</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFA_DATPRF</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.02.04</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">103000362</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">42</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">8.84</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.02.04</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">03</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">103000114</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1.6</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.02.04</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">04</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">103000011</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.02.04</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">05</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">501000021</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">883</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1.76</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.02.04</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">06</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">103000004</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">17</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">4.69</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.02.04</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">07</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">103000005</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">5.79</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.02.04</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">08</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">103000248</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">71</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1.78</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.02.04</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">09</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">103000009</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">33</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">4.25</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.02.04</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">0A</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">103000016</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">33</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0.65</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.02.04</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">11</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">103000273</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">22</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0.8</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.02.04</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">12</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">103000392</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0.66</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.02.04</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">13</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">103000028</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1.05</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.02.04</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">14</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">103000006</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">33</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1.79</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.02.04</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">15</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">103000438</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">9.5</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.02.05</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">02</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">105000044</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0.18</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.02.05</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">03</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">103000398</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">57.65</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.02.05</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">04</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">103000366</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.02.05</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">05</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">103000365</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.02.05</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">06</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">105000184</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">2.51</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.02.05</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">07</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">103000010</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">0.34</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.02.05</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">08</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">103000089</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">22.38</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.02.05</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">09</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">105001096</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">15.6</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.02.05</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">0A</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">103000028</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1.05</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">01.03.02.05</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">11</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">103000040</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="Number">44.46</Data></Cell>
+    <Cell ss:StyleID="LINEBLeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">01.03.02.05</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">12</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">108000013</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="LINEALeftGeneral"><Data ss:Type="String">17/01/2023</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.31496062000000002"/>
+    <Footer x:Margin="0.31496062000000002"/>
+    <PageMargins x:Bottom="0.78740157499999996" x:Left="0.511811024"
+     x:Right="0.511811024" x:Top="0.78740157499999996"/>
+   </PageSetup>
+   <Unsynced/>
+   <Selected/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="4-RECURSOS">
+  <Table ss:ExpandedColumnCount="9" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Column ss:Width="66"/>
+   <Column ss:Width="52.8"/>
+   <Column ss:Width="66"/>
+   <Column ss:Width="66"/>
+   <Column ss:Width="59.4"/>
+   <Column ss:Width="59.4"/>
+   <Column ss:Width="66"/>
+   <Column ss:Width="59.4"/>
+   <Column ss:Width="52.8"/>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="TITLE" ss:MergeAcross="8"><Data ss:Type="String">Layout PMS</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFA_TAREFA</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFA_ITEM</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFA_RECURS</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFA_PRODUT</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFA_QUANT</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFA_CUSTD</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFA_DATPRF</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFA_MOEDA</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFA_ALOC</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.31496062000000002"/>
+    <Footer x:Margin="0.31496062000000002"/>
+    <PageMargins x:Bottom="0.78740157499999996" x:Left="0.511811024"
+     x:Right="0.511811024" x:Top="0.78740157499999996"/>
+   </PageSetup>
+   <Unsynced/>
+   <Selected/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="5-DESPESAS">
+  <Table ss:ExpandedColumnCount="7" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Column ss:Width="66"/>
+   <Column ss:Width="52.8"/>
+   <Column ss:Width="59.4"/>
+   <Column ss:Width="66"/>
+   <Column ss:Width="59.4"/>
+   <Column ss:Width="59.4"/>
+   <Column ss:Width="66"/>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="TITLE" ss:MergeAcross="6"><Data ss:Type="String">Layout PMS</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="1">
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFB_TAREFA</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFB_ITEM</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFB_TIPOD</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFB_DESCRI</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFB_VALOR</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFB_MOEDA</Data></Cell>
+    <Cell ss:StyleID="HEADER"><Data ss:Type="String">AFB_DATPRF</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.31496062000000002"/>
+    <Footer x:Margin="0.31496062000000002"/>
+    <PageMargins x:Bottom="0.78740157499999996" x:Left="0.511811024"
+     x:Right="0.511811024" x:Top="0.78740157499999996"/>
+   </PageSetup>
+   <Unsynced/>
+   <Selected/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
