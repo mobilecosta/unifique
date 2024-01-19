@@ -746,6 +746,14 @@ Return (lRet)
 Static Function PRXNIV(cTabela, cEDTPai)
 
 	Local cNivTrf := ""
+	
+	If cEDTPai == "001"
+		cNivTrf := "001"
+	Else
+		cNivTrf := "003"
+	EndIF
+	
+	Return cNivTrf
 
 	If cTabela == "AFC"
 		cQuery := " SELECT DISTINCT "
