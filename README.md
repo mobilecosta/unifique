@@ -5,5 +5,5 @@ https://drive.google.com/file/d/16BKgC7uGAJ8Oyi9AzpVrS3FtmM5qgSFz/view?usp=shari
 
 Acesso Fluig:
 http://10.252.15.2:8080/portal/home
-admin
-unifique@2023
+
+User/Password: admin - unifique@2023
