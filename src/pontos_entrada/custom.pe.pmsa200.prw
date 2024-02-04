@@ -15,24 +15,35 @@ DESC: Ponto de entrada na finalização na alteração da fase - Função PMS200Fase
 /*/
 //--------------------------------------------------------------------
 USER FUNCTION PMA200GRV
-    Local lRetorno := .T.
-    Local _cNatureza    := "51102110012"
-    Local _cItemCtb     := "0"
-    Local _cCusto       := "606001"
-    Local _cClasse      := "010048"
+    Local lRetorno 		:= .T.
+	Local nX  			:= 0
+    Local _cItemCtb     := ""
+    Local _cCusto       := ""
+    Local _cClasse      := ""
+	Local _cContaCt1    := SuperGetMv("ES_XFLUIGCO", , '60000008')
+
+	DbSelectArea("AF1")		// AF1_FILIAL + AF1_ORCAME
+	DbSetOrder(1)
+	If ! DbSeek(AF8->(AF8_FILIAL + AF8_ORCAME))
+		cMensagem := "Orçamento [" + AllTrim(AF8->AF8_ORCAME) + "] não localizado informado no projeto não localizado." 
+		Alert(cMensagem)
+		
+		RETURN .F.
+	EndIf
+
+    _cItemCtb := AF1->AF1_XITCTB
+    _cCusto   := AF1->AF1_XCC
+    _cClasse  := AF1->AF1_XCLVLR
 
 	DbSelectArea("CTD")
 	DbSetOrder(1)
 
 	// Valida o Item Contábil
 	If !DbSeek(xFilial("CTD") + _cItemCtb )
-		
 		cMensagem := "Item contábil não localizado. Favor verifique e tente novamente." 
-		
 		Alert(cMensagem)
 		
 		RETURN .F.
-
 	Endif  
 
 	// Valida o Item Classe de valor
@@ -41,12 +52,10 @@ USER FUNCTION PMA200GRV
 	DbSetOrder(1)
 
 	If !DbSeek(xFilial("CTH") + _cClasse )
-		
 		cMensagem := "Classe contábil não localizado. Favor verifique e tente novamente." 
 		Alert(cMensagem)
 		
 		RETURN .F.
-
 	Endif  
 
 	// Valida centro de custos
@@ -54,51 +63,26 @@ USER FUNCTION PMA200GRV
 	DbSetOrder(1)
 
 	If !DbSeek(xFilial("CTT") + _cCusto )
-		
 		cMensagem := "Classe contábil não localizado. Favor verifique e tente novamente." 
-		
 		Alert(cMensagem)
 		
 		RETURN .F.
-
-	Endif  
-
-	// Valida centro de custos
-	DbSelectArea("SED")
-	DbSetOrder(1)
-
-	If !DbSeek(xFilial("SED") + _cNatureza )
-		
-		cMensagem := "Natureza não localizada. Favor verifique e tente novamente." 
-		
-		Alert(cMensagem)
-		
-		RETURN .F.
-	else
-	   _cContaCt1 := SED->ED_CONTA 
 	Endif  
 
 	// Busca conta orçamentária através da conta contábil
-	cTab := GetNextAlias()
-		
-	BeginSQL Alias cTab
+	BeginSQL Alias "QRYPE"
 
-	SELECT CT1_CONTA,
-			  CT1_XCO  ,
-			  AK5_XOPER
-	FROM %table:CT1% CT1
-	INNER JOIN %table:AK5% AK5
-	   ON    CT1_FILIAL  =  %xFilial:CT1%
-	   AND   AK5_FILIAL  =  %xFilial:AK5% 
-	   AND   CT1.CT1_XCO = AK5.AK5_CODIGO
-	WHERE CT1.CT1_CONTA = %Exp:_cContaCt1%
-		AND  CT1.%notdel%
-		AND  AK5.%notdel% 
+	SELECT CT1_CONTA, CT1_XCO, AK5_XOPER
+	  FROM %table:CT1% CT1
+	  JOIN %table:AK5% AK5 ON AK5_FILIAL =  %xFilial:AK5% 
+	   AND CT1.CT1_XCO = AK5.AK5_CODIGO AND  AK5.%notdel% 
+	 WHERE CT1_FILIAL = %xFilial:CT1% AND CT1.CT1_CONTA = %Exp:_cContaCt1% AND  CT1.%notdel%
+		
 	EndSQL
 
-	If (cTab)->(!EOF()) 			
+	If QRYPE->(!EOF()) 			
 
-		_cOperacao := (cTab)->AK5_XOPER
+		_cOperacao := QRYPE->AK5_XOPER
 		_cTpSaldo  := "OR"
 		
 		cChave := " "
@@ -131,17 +115,20 @@ USER FUNCTION PMA200GRV
 		aRet := fSaldosDt(_cConfig,cChave,dDataRef)
 		
 		//Soma valores a Credito
-		For x := 1 to len(aRet)
-			nValorCred += aRet[x,1,1]
-			nValorDeb  += aRet[x,2,1]
+		For nX := 1 to len(aRet)
+			nValorCred += aRet[nX,1,1]
+			nValorDeb  += aRet[nX,2,1]
 		Next  
 		
 		nSaldo := ( nValorCred - nValorDeb) 
 		
-		ALERT(nSaldo)
+		ALERT("Saldo: " + Trans(nSaldo, "@E 9,999,999,999,999.99"))
+	Else
+		ALERT("Operação não localizada !")
 	EndIf
+	QRYPE->(DbCloseArea())
 
-Return
+Return lRetorno
 
 *************************************************
 static function fSaldosDt(cCubo,cChave,dDataRef)
