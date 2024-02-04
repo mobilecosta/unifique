@@ -15,12 +15,20 @@ DESC: Ponto de entrada na finalização na alteração da fase - Função PMS200Fase
 /*/
 //--------------------------------------------------------------------
 USER FUNCTION PMA200GRV
-    Local lRetorno 		:= .T.
-	Local nX  			:= 0
-    Local _cItemCtb     := ""
-    Local _cCusto       := ""
-    Local _cClasse      := ""
-	Local _cContaCt1    := SuperGetMv("ES_XFLUIGCO", , '60000008')
+    Local lRetorno 	 := .T.
+	Local nX  	     := 0
+    Local _cItemCtb  := ""
+    Local _cCusto    := ""
+    Local _cClasse   := ""
+	Local _cContaAK5 := SuperGetMv("ES_XFLUIGCO", , '60000008')
+	Local _cOperacao := ""
+	Local _cTpSaldo  := "OR"
+	Local cChave     := ""
+	Local _cConfig   := "BL"
+	Local _cNivel    := "01" 
+	Local nValorCred := 0
+	Local nValorDeb  := 0
+	Local nSaldo     := 0
 
 	DbSelectArea("AF1")		// AF1_FILIAL + AF1_ORCAME
 	DbSetOrder(1)
@@ -69,20 +77,10 @@ USER FUNCTION PMA200GRV
 		RETURN .F.
 	Endif  
 
-	// Busca conta orçamentária através da conta contábil
-	BeginSQL Alias "QRYPE"
-
-	SELECT CT1_CONTA, CT1_XCO, AK5_XOPER
-	  FROM %table:CT1% CT1
-	  JOIN %table:AK5% AK5 ON AK5_FILIAL =  %xFilial:AK5% 
-	   AND CT1.CT1_XCO = AK5.AK5_CODIGO AND  AK5.%notdel% 
-	 WHERE CT1_FILIAL = %xFilial:CT1% AND CT1.CT1_CONTA = %Exp:_cContaCt1% AND  CT1.%notdel%
-		
-	EndSQL
-
-	If QRYPE->(!EOF()) 			
-
-		_cOperacao := QRYPE->AK5_XOPER
+	// Busca conta orçamentária
+	AK5->(DbSetOrder(1))	// AK5_FILIAL + AK5_CODIGO
+	If AK5->(DbSeek(xFilial() + _cContaAK5))
+		_cOperacao := AK5->AK5_XOPER
 		_cTpSaldo  := "OR"
 		
 		cChave := " "
@@ -112,7 +110,7 @@ USER FUNCTION PMA200GRV
 
 		Endif
 
-		aRet := fSaldosDt(_cConfig,cChave,dDataRef)
+		aRet := fSaldosDt(_cConfig,cChave,dDataBase)
 		
 		//Soma valores a Credito
 		For nX := 1 to len(aRet)
@@ -121,12 +119,16 @@ USER FUNCTION PMA200GRV
 		Next  
 		
 		nSaldo := ( nValorCred - nValorDeb) 
-		
-		ALERT("Saldo: " + Trans(nSaldo, "@E 9,999,999,999,999.99"))
+		If nSaldo == 0
+			M->AF8_FASE := "05"
+
+			ALERT("Saldo: " + Trans(nSaldo, "@E 9,999,999,999,999.99"))
+		Else
+			ALERT("Mudança de fase OK !")
+		EndIF
 	Else
 		ALERT("Operação não localizada !")
 	EndIf
-	QRYPE->(DbCloseArea())
 
 Return lRetorno
 
