@@ -15,7 +15,10 @@
 	"lastPrograms": [
 		{
 			"label": "SIGAPMS"
+		},
+		{
+			"label": "SIGAGCT"
 		}
 	],
-	"lastProgramExecuted": "SIGAPMS"
+	"lastProgramExecuted": "SIGAGCT"
 }

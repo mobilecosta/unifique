@@ -10,7 +10,7 @@ User Function PMA200ENC()
 	Local lRet := PARAMIXB[1]
 
 	//verifica se houve encerramento de projeto
-	If lRet
+	If lRet .And. M->AF8_FASE == "04"	// Somente gera o Ativo na fase 04
 		U_GeraATF() //chamada da função para inclusão de bem no Ativo Fixo
 	
 	Endif
