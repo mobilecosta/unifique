@@ -1,0 +1,146 @@
+select[readonly] {
+	background: #eee;
+    pointer-events: none;
+    touch-action: none;
+}
+      	
+.avatar {
+    /* make a square container */
+    width: 100%;
+    height: 100%;
+    max-width: 70px;
+    max-height: 70px;
+
+    /* fill the container, preserving aspect ratio, and cropping to fit */
+    background-size: cover;
+
+    /* center the image vertically and horizontally */
+    background-position: top center;
+
+    /* round the edges to a circle with border radius 1/2 container size */
+    border-radius: 50%;
+    
+	border: 1px solid #eee !important;
+}
+
+.titulo {
+    margin-bottom: 20px;
+    padding: 8px 15px;
+    list-style: none;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+.header-xplanning{
+	background-color: #fff !important;	
+	padding: 10px;
+	border: 1px solid #7aa7c7 !important;
+}
+
+.titleSolicitante {
+	font-size: 0.9rem !important;
+	font-weight: bold !important;
+	background-color: #ffff !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 32px !important;
+	color: #58595b !important;
+ 	padding-left: 7px !important; 
+}
+
+.customSolicitante {
+	font-size: 11px !important;
+	background-color: #ffff !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 14px !important;
+	color: #58595b !important;
+	width: 90% !important;
+}
+
+/* Breadcrumb */
+.breadcrumbs-xp {
+	background-color: #e1ecf4;
+	color: #35729d;
+	font-weight: bold;
+	display: flex;
+	font-size: 13px;
+	position: relative;
+	height: 55px;
+}
+
+.breadcrumb-item-xp {
+	padding-left: 30px;
+}
+
+.breadcrumb-item-xp:first-child {
+	padding-left: 10px;
+}
+
+.breadcrumb-item-xp .number-bread {
+	display: block;
+	background-color: #7aa7c7;
+	width: 8px;
+	height: 16px;
+	border-radius: 15px;
+	padding: 12px 12px;
+	float: left;
+	margin: 16px 0 0 10px;
+	color: #fff;
+}
+
+.breadcrumb-item-xp .label-bread {
+	display: block;
+	padding: 20px 0 20px 10px;
+	float: left;
+}
+
+.breadcrumb-item-xp::after {
+	content: '';
+	display: block;
+	width: 35px;
+	height: 35px;
+	transform: rotate(130deg) skew(-10deg);
+	float: right;
+	position: relative;
+	top: 10px;
+	left: 19px;
+	border-top: 1px solid #7aa7c7;
+	border-left: 1px solid #7aa7c7;
+	background-color: #e1ecf4;
+}
+
+.breadcrumb-item-xp.current,
+.breadcrumb-item-xp.current::after{
+	background-color: #7aa7c7;
+	color: #fff;
+}
+
+.breadcrumb-item-xp.current .number-bread {
+	background-color: #e1ecf4;
+	color: #7aa7c7;
+}
+
+/* Accordion */
+.customPanel {
+	border-color: #7aa7c7 !important;	
+	font-size: 13px;
+}
+
+.titulo-panel {
+    background-color: #e1ecf4 !important;
+    border-bottom: #7aa7c7 !important;	
+    border-style: solid !important;	
+    border-top: none !important;	
+    border-left: none !important;	
+    border-right: none !important;	
+    border-width: 0.5 !important;	
+    padding: 0px !important;
+}
+
+.labelPanelTitle {
+	font-weight: bold !important;
+	font-size: 13px !important;
+	color: #35729d !important;
+}

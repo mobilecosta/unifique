@@ -1,0 +1,97 @@
+.formulario .zoom-alert {
+	position: absolute !important;
+	width: calc(100% - 30px) !important;
+	z-index: 999 !important;
+	-webkit-box-shadow: 2px 2px 2px -1px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 2px 2px 2px -1px rgba(0, 0, 0, 0.75);
+	box-shadow: 2px 2px 2px -1px rgba(0, 0, 0, 0.75);
+}
+
+.required::after{
+	content: "*";
+	color: red;
+	font-weight: bolder;
+}
+
+input.button-anexo {
+    background-image: url(fluigicon-paperclip.png); /* 16px x 16px */
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    height: 16px;           /* make this the size of your image */
+    padding-left: 16px;     /* make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+}
+
+input.button-download {
+    background-image: url(fluigicon-download.png); /* 16px x 16px */
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    height: 16px;           /* make this the size of your image */
+    padding-left: 16px;     /* make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+}
+
+input.button-viewer {
+    background-image: url(fluigicon-eye-open.png); /* 16px x 16px */
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    height: 16px;           /* make this the size of your image */
+    padding-left: 16px;     /* make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+}
+
+input.button-clean {
+    background-image: url(fluigicon-minus-circle.png); /* 16px x 16px */
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    height: 16px;           /* make this the size of your image */
+    padding-left: 16px;     /* make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+}
+
+@media only screen and (max-width: 600px) {  
+	.anexoDesktop {
+		display: none;
+	}
+	#mobile-indicator {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {  
+	.anexoDesktop {
+		display: none;
+	}
+	#mobile-indicator {
+        display: none;
+    }
+    #imgSolicitante{
+        max-width: 40px;
+        max-height: 40px 
+    }
+    #rowCabec{
+        padding-left: 15%;
+    }
+}
+   
+
+@media only screen and (min-width: 768px) {  
+	.anexoMobile {
+		display: none;	
+	}
+}
+
+
