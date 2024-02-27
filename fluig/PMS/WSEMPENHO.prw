@@ -148,4 +148,49 @@ ErrorBlock(bError)
 FreeObj(oOBJ)
 
 Return(.T.)
+//Abaixo criei esta função para testar (Washington Leao-26-02-2024)
+User Function TsEmpenho(cCodOrc, lDelEmp)
 
+	DbSelectArea( 'AF1' )
+	AF1->( DbSetOrder( 1 ) )
+
+	DbSelectArea( 'AF5' )
+	AF5->( DbSetOrder( 1 ) )
+		
+	If AF1->(DbSeek( xFilial("AF1") + cCodOrc ))
+
+		AF5->(DbSeek( xFilial("AF5") + cCodOrc ))
+
+		cCo     := GetMv("FS_XCOORCA")
+		cOper   := '6'
+		cCc     := AF1->AF1_XCC
+		cClVl   := AF1->AF1_XCLVLR
+		cUniOrc := '010001'
+		cEnt06  := '000001'
+
+		xRet := pcoIniLan( '900001', .T. )
+
+		Begin Transaction
+
+			xRet := pcoDetLan( '900001', '01', procName(), .T. )
+
+			If !lDelEmp //Somente na Inclusão
+
+				xRet := pcoVldLan( '900001', '01', procName()  )
+
+				xRet := pcoDetLan( '900001', '01', procName(), .F. )
+			
+			EndIf
+
+		End Transaction
+
+		xRet := pcoFinLan( '900001' )
+
+		Alert("Ponto de lancamento executado")
+	else
+			
+		//Rotina de Gravação AQUI
+		Alert("Orçamento não encontrado.")
+	EndIf
+
+Return
