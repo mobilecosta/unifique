@@ -26,9 +26,3 @@ User Function CNTA300()
      EndIf
 
 Return xRet
-
-User Function CTA100MNU
-
-    aAdd(aRotina,{"Imp. Itens via CSV","U_ImpItens()",0,1,0,NIL,NIL,NIL})
-
-Return
