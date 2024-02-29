@@ -13,7 +13,8 @@ USER FUNCTION P100ITCT
 	Local lRet := .T.
 
 	If LEN(AllTrim(M->AF1_XITCTB)) <> 6
-		ALERT("Atenção. O Item contábil deve ter 6 caracteres")
+		//ALERT("Atenção. O Item contábil deve ter 6 caracteres")
+  FWAlertHelp("O Item contábil Sintético é menor ou maior que 6 dígitos", "Escolha somente com 6 dígitos- FWAlertHelp")	
 		lRet := .F.
 	Endif  
 
