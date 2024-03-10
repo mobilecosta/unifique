@@ -42,6 +42,7 @@ USER FUNCTION PMA200GRV
 	If nValorAF1 < nValorAF9
 		M->AF8_FASE := "05"
 
+		U_UN94GAPV(AF8->AF8_PROJET, nValorAF9)
 		ALERT("Projeto enviado para aprovação !")
 	Endif  
 	RestArea(aArea)
